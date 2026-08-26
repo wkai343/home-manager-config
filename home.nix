@@ -115,6 +115,7 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  
   programs.bash = {
     enable = true;
 
@@ -201,6 +202,12 @@
       };
       init.defaultBranch = "main";
     };
+  };
+
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
   };
 
   programs.codex = {
