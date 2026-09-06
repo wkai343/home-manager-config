@@ -8,6 +8,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim.url = "github:nix-community/nixvim";
     codex-desktop-linux = {
       url = "github:ilysenko/codex-desktop-linux";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,7 +16,13 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, codex-desktop-linux, ... }:
+    {
+      nixpkgs,
+      home-manager,
+      nixvim,
+      codex-desktop-linux,
+      ...
+    }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -26,7 +33,11 @@
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ codex-desktop-linux.homeManagerModules.default ./home.nix ];
+        modules = [
+          codex-desktop-linux.homeManagerModules.default
+          nixvim.homeModules.nixvim
+          ./home.nix
+        ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix

@@ -12,7 +12,7 @@
     ./modules/programs/git.nix
     ./modules/programs/home-manager.nix
     ./modules/programs/jq.nix
-    ./modules/programs/neovim.nix
+    ./modules/programs/nixvim.nix
     ./modules/programs/prismlauncher.nix
     ./modules/programs/ripgrep.nix
     ./modules/programs/uv.nix

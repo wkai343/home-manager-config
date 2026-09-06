@@ -15,6 +15,8 @@
     reqable
     microsoft-edge
     osu-lazer-bin
+    scrcpy
+    android-tools
 
     (writeShellScriptBin "nixup" ''
       cd ${config.home.homeDirectory}/.config/home-manager && nix flake update
