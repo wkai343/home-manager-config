@@ -3,16 +3,9 @@
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixvim.url = "github:nix-community/nixvim";
-    codex-desktop-linux = {
-      url = "github:ilysenko/codex-desktop-linux";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixpkgs.url = "git+https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git?ref=nixos-unstable";
+    home-manager.url = "git+https://git.nju.edu.cn/nix-mirror/home-manager.git";
+    nixvim.url = "git+https://git.nju.edu.cn/nix-mirror/nixvim.git";
   };
 
   outputs =
@@ -20,11 +13,11 @@
       nixpkgs,
       home-manager,
       nixvim,
-      codex-desktop-linux,
       ...
     }:
     let
       system = "x86_64-linux";
+      # system = "aarch64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
@@ -34,7 +27,6 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [
-          codex-desktop-linux.homeManagerModules.default
           nixvim.homeModules.nixvim
           ./home.nix
         ];
