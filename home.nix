@@ -4,6 +4,7 @@
     ./modules/nixpkgs.nix
     ./modules/packages.nix
     ./modules/programs/bash.nix
+    ./modules/programs/bat.nix
     ./modules/programs/codex.nix
     ./modules/programs/direnv.nix
     ./modules/programs/eza.nix
