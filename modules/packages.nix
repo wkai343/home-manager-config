@@ -18,6 +18,9 @@
     scrcpy
     android-tools
     looking-glass-client
+    rclone
+    postgresql_18
+    dbeaver-bin
 
     (writeShellScriptBin "nixup" ''
       cd ${config.home.homeDirectory}/.config/home-manager && nix flake update
