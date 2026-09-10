@@ -19,6 +19,7 @@
     ./modules/programs/uv.nix
     ./modules/programs/yazi.nix
     ./modules/programs/zoxide.nix
+    # ./modules/services/freshrss.nix
     ./modules/services/tldr-update.nix
     # ./modules/services/vaultwarden.nix
   ];
