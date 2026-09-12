@@ -21,6 +21,7 @@
     rclone
     postgresql_18
     dbeaver-bin
+    frp
 
     (writeShellScriptBin "nixup" ''
       cd ${config.home.homeDirectory}/.config/home-manager && nix flake update
