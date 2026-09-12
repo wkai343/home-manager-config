@@ -20,6 +20,9 @@
     ./modules/programs/yazi.nix
     ./modules/programs/zoxide.nix
     # ./modules/services/freshrss.nix
+    # ./modules/services/frpc.nix
+    # ./modules/services/openlist.nix
+    # ./modules/services/postgresql.nix
     ./modules/services/tldr-update.nix
     # ./modules/services/vaultwarden.nix
   ];
