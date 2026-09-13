@@ -10,6 +10,7 @@
       "microsoft-edge"
       "osu-lazer-bin"
       "nvidia-x11"
+      "libsciter"
     ];
 
   nixpkgs.config.nvidia.acceptLicense = true;
