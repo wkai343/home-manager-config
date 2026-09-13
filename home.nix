@@ -23,6 +23,7 @@
     # ./modules/services/frpc.nix
     # ./modules/services/openlist.nix
     # ./modules/services/postgresql.nix
+    # ./modules/services/rustdesk-server.nix
     ./modules/services/tldr-update.nix
     # ./modules/services/vaultwarden.nix
   ];
